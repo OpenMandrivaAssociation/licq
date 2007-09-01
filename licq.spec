@@ -18,7 +18,6 @@ Source12:	%{name}.32.png
 Source13:	%{name}.48.png
 Patch1:		licq-1.3.0-conf.patch
 Patch2:		licq-1.2.4-xvt.patch
-Patch3:		licq-1.3.0-lib64.patch
 
 Patch5:		licq-1.3.0-c++fixes.patch 
 Obsoletes:	%{obsprov}
@@ -96,7 +95,6 @@ Install this if you want to run Licq on the console.
 %setup -q -a 1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1 -b .lib64
 %patch5 -p1 -b .c++fixes
 
 %build
