@@ -17,7 +17,7 @@ Source11:	%{name}.16.png
 Source12:	%{name}.32.png
 Source13:	%{name}.48.png
 Patch1:		licq-1.3.0-conf.patch
-Patch2:		licq-1.2.4-xvt.patch
+Patch2:		licq-1.3.4-xvt.patch
 
 Patch5:		licq-1.3.0-c++fixes.patch 
 Obsoletes:	%{obsprov}
@@ -101,9 +101,6 @@ Install this if you want to run Licq on the console.
 # qt3 stuff
 export QTDIR=%{_prefix}/lib/qt3
 export QTLIB=$QTDIR/%{_lib}
-
-# remove all the CVS crap before we build anything.
-find . -type d -name 'CVS' | xargs rm -rf {} \;
 
 export WANT_AUTOCONF_2_5=1
 rm -rf `find -type d -name autom4te.cache`
@@ -215,9 +212,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/licq-ssl
 %{_bindir}/viewurl*.sh
 %attr(755,root,root)%dir %{_datadir}/licq/qt-gui
-%attr(755, root,root) %dir %{_datadir}/licq/translations
-%attr(755, root,root) %dir %{_datadir}/licq/utilities
-%attr(755, root,root) %dir %{_datadir}/licq/sounds
+%attr(755,root,root) %dir %{_datadir}/licq/translations
+%attr(755,root,root) %dir %{_datadir}/licq/utilities
+%attr(755,root,root) %dir %{_datadir}/licq/sounds
+%{_datadir}/applications/*.desktop
 %dir %_libdir/licq
 %{_datadir}/licq/qt-gui/*
 %{_datadir}/licq/sounds/*
