@@ -1,5 +1,5 @@
 %define name	licq
-%define version	1.3.2
+%define version	1.3.4
 %define release %mkrel 1
 %define obsprov licq-base licq-ssl licq-data licq-update-hosts licq-forwarder licq-autoreply
 
@@ -29,7 +29,7 @@ BuildRequires:	ncurses-devel
 BuildRequires:	openssl-devel
 BuildRequires:	cdk-devel >= 4.9.11-4mdk
 BuildRequires:	gpgme-devel >= 0.9.0
-BuildRequires:  automake1.8
+BuildRequires:  automake
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %package	console
@@ -136,7 +136,7 @@ cp -Rf ../qt-gui* ../kde-gui
 cd ../kde-gui*
 rm -rf autom4te.cache
 
-aclocal-1.8
+aclocal
 autoconf
 # Search for qt/kde libraries in the right directories (avoid patch)
 # NOTE: please don't regenerate configure scripts below
@@ -171,25 +171,6 @@ mkdir -p $RPM_BUILD_ROOT%{_liconsdir}
 install -m644 %{SOURCE11} -D $RPM_BUILD_ROOT%{_miconsdir}/licq.png
 install -m644 %{SOURCE12} -D $RPM_BUILD_ROOT%{_iconsdir}/licq.png
 install -m644 %{SOURCE13} -D $RPM_BUILD_ROOT%{_liconsdir}/licq.png
-
-# menu stuff. Start kdeplugin when in kde
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat > $RPM_BUILD_ROOT%{_menudir}/licq <<EOF
-?package(licq):\
-command="licq -p kde-gui"\
-icon="licq.png"\
-title="Licq (KDE)"\
-longtitle="ICQ client"\
-needs="kde"\
-section="Internet/Instant Messaging"
-?package(licq):\
-command="licq"\
-icon="licq.png"\
-title="Licq"\
-longtitle="ICQ client"\
-needs="x11"\
-section="Networking/Instant Messaging"
-EOF
 
 
 #qt gui
@@ -235,7 +216,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/licq
 %{_bindir}/licq-ssl
 %{_bindir}/viewurl*.sh
-%{_menudir}/licq
 %attr(755,root,root)%dir %{_datadir}/licq/qt-gui
 %attr(755, root,root) %dir %{_datadir}/licq/translations
 %attr(755, root,root) %dir %{_datadir}/licq/utilities
