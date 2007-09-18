@@ -1,6 +1,6 @@
 %define name	licq
 %define version	1.3.4
-%define release %mkrel 1
+%define release %mkrel 2
 %define obsprov licq-base licq-ssl licq-data licq-update-hosts licq-forwarder licq-autoreply
 
 Summary:	ICQ clone written in C++, and the default plugin in Qt
