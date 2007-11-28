@@ -1,16 +1,13 @@
-%define name	licq
-%define version	1.3.4
-%define release %mkrel 2
 %define obsprov licq-base licq-ssl licq-data licq-update-hosts licq-forwarder licq-autoreply
 
+Name:		licq
+Version:	1.3.5
+Release:	%mkrel 1
 Summary:	ICQ clone written in C++, and the default plugin in Qt
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	GPL
 Group:		Networking/Instant messaging
 URL:		http://www.licq.org/
-Source0:	http://download.sourceforge.net/licq/%{name}-%{version}.tar.bz2
+Source0:	http://ovh.dl.sourceforge.net/licq/licq-%{version}.tar.bz2
 Source1:	%{name}-other-browsers.tar.bz2
 Source6:	forwarder-1.0.1.tar.bz2
 Source11:	%{name}.16.png
