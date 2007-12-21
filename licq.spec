@@ -26,6 +26,7 @@ BuildRequires:	openssl-devel
 BuildRequires:	cdk-devel >= 4.9.11-4mdk
 BuildRequires:	gpgme-devel >= 0.9.0
 BuildRequires:  automake
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %package	console
 Summary:	Console based plugin for Licq that uses ncurses
