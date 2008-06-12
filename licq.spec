@@ -204,7 +204,7 @@ rm -rf $RPM_BUILD_ROOT
 %postun
 %{clean_menus}
 
-#licq 
+
 %files -f %{name}.lang
 %defattr(-,root,root)
 %{_bindir}/licq
