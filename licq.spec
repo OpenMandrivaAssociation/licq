@@ -2,7 +2,7 @@
 
 Name:		licq
 Version:	1.3.5
-Release:	%mkrel 2
+Release:	%mkrel 3
 Summary:	ICQ clone written in C++, and the default plugin in Qt
 License:	GPL
 Group:		Networking/Instant messaging
@@ -15,9 +15,10 @@ Source12:	%{name}.32.png
 Source13:	%{name}.48.png
 Patch1:		licq-1.3.0-conf.patch
 Patch2:		licq-1.3.4-xvt.patch
-
+Patch3:		licq-1.3.5-logonfix.patch
 Patch5:		licq-1.3.0-c++fixes.patch 
 patch6:         licq-1.3.5-dos.patch
+Patch7:		licq-1.3.5-gcc43.patch
 Obsoletes:	%{obsprov}
 Provides:	%{obsprov}
 BuildRequires:	autoconf2.5
@@ -93,13 +94,15 @@ Install this if you want to run Licq on the console.
 %setup -q -a 1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p0
 %patch5 -p1 -b .c++fixes
 %patch6 -p1 -b .CVE-2008_1996
+%patch7 -p1
 
 %build
 # qt3 stuff
-export QTDIR=%{_prefix}/lib/qt3
-export QTLIB=$QTDIR/%{_lib}
+export QTDIR=%{qt3dir}
+export QTLIB=%{qt3lib}
 
 export WANT_AUTOCONF_2_5=1
 rm -rf `find -type d -name autom4te.cache`
