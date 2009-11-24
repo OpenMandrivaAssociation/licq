@@ -1,8 +1,8 @@
 %define obsprov licq-base licq-ssl licq-data licq-update-hosts licq-forwarder licq-autoreply licq-kde
 
 Name:		licq
-Version:	1.3.6
-Release:	%mkrel 2
+Version:	1.3.7
+Release:	%mkrel 1
 Summary:	ICQ clone written in C++
 License:	GPLv2+
 Group:		Networking/Instant messaging
@@ -13,12 +13,12 @@ Source6:	forwarder-1.0.1.tar.bz2
 Source11:	%{name}.16.png
 Source12:	%{name}.32.png
 Source13:	%{name}.48.png
-Patch1:		licq-1.3.0-conf.patch
+Patch1:		licq-1.3.7-conf.patch
 Patch2:		licq-1.3.4-xvt.patch
 Patch5:		licq-1.3.0-c++fixes.patch 
-Patch8:		licq-1.3.6-specify-libdir.patch
 # fwang: this is solved in other ways upstream
-Patch10:	licq-1.3.6-fix-desktop.patch
+Patch10:	licq-1.3.7-fix-desktop.patch
+Patch15:	licq-1.3.7-mdv-fix-str-fmt.patch
 Obsoletes:	%{obsprov}
 BuildRequires:	autoconf
 BuildRequires:	qt4-devel
@@ -92,11 +92,11 @@ Install this if you want to run Licq on the console.
 %prep
 #Danny: Also unpack other-browser stuff:
 %setup -q -a 1
-%patch1 -p1
+%patch1 -p1 -b .licq_conf
 %patch2 -p1
 %patch5 -p1 -b .c++fixes
-%patch8 -p0
-%patch10 -p0 -b .cmake
+%patch10 -p1 -b .fixdesktop
+%patch15 -p1 -b .strfmt
 
 %build
 rm -rf `find -type d -name autom4te.cache`
