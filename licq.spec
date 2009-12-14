@@ -1,7 +1,7 @@
 %define obsprov licq-base licq-ssl licq-data licq-update-hosts licq-forwarder licq-autoreply licq-kde
 
 Name:		licq
-Version:	1.3.7
+Version:	1.3.8
 Release:	%mkrel 1
 Summary:	ICQ clone written in C++
 License:	GPLv2+
