@@ -2,7 +2,7 @@
 
 Name:		licq
 Version:	1.3.8
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	ICQ clone written in C++
 License:	GPLv2+
 Group:		Networking/Instant messaging
