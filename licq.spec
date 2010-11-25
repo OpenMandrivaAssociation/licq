@@ -1,8 +1,8 @@
 %define obsprov licq-base licq-ssl licq-data licq-update-hosts licq-forwarder licq-autoreply licq-kde
 
 Name:		licq
-Version:	1.3.8
-Release:	%mkrel 2
+Version:	1.3.9
+Release:	%mkrel 1
 Summary:	ICQ clone written in C++
 License:	GPLv2+
 Group:		Networking/Instant messaging
@@ -16,8 +16,6 @@ Source13:	%{name}.48.png
 Patch1:		licq-1.3.7-conf.patch
 Patch2:		licq-1.3.4-xvt.patch
 Patch5:		licq-1.3.0-c++fixes.patch 
-# fwang: this is solved in other ways upstream
-Patch10:	licq-1.3.7-fix-desktop.patch
 Patch15:	licq-1.3.7-mdv-fix-str-fmt.patch
 Obsoletes:	%{obsprov}
 BuildRequires:	autoconf
@@ -95,7 +93,6 @@ Install this if you want to run Licq on the console.
 %patch1 -p1 -b .licq_conf
 %patch2 -p1
 %patch5 -p1 -b .c++fixes
-%patch10 -p1 -b .fixdesktop
 %patch15 -p1 -b .strfmt
 
 %build
