@@ -192,3 +192,131 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{_libdir}/licq/licq*rms*
 %doc plugins/rms*/COPYING plugins/rms*/README 
+
+
+%changelog
+* Thu Nov 25 2010 Funda Wang <fwang@mandriva.org> 1.3.9-1mdv2011.0
++ Revision: 600930
+- new verison 1.3.9
+
+* Mon Apr 19 2010 Funda Wang <fwang@mandriva.org> 1.3.8-2mdv2010.1
++ Revision: 536633
+- rebuild
+
+* Mon Dec 14 2009 Funda Wang <fwang@mandriva.org> 1.3.8-1mdv2010.1
++ Revision: 478580
+- new version 1.3.8
+
+* Tue Nov 24 2009 Jérôme Brenier <incubusss@mandriva.org> 1.3.7-1mdv2010.1
++ Revision: 469821
+- new version 1.3.7
+- rediff P1 and P10
+- drop P8 (merged upstream)
+- fix str fmt (P15 added)
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+* Sun Oct 12 2008 Funda Wang <fwang@mandriva.org> 1.3.6-1mdv2009.1
++ Revision: 292628
+- New version 1.3.6
+- comply LIB_SUFFIX
+
+* Fri Jul 04 2008 Funda Wang <fwang@mandriva.org> 1.3.5-3mdv2009.0
++ Revision: 231668
+- add patch to fix logon
+- add gcc43 patch from gentoo
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Mon May 12 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 1.3.5-2mdv2009.0
++ Revision: 206191
+- fixed DoS vulnerability - CVE-2008-1996
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Wed Nov 28 2007 David Walluck <walluck@mandriva.org> 1.3.5-1mdv2008.1
++ Revision: 113616
+- 1.3.5
+
+* Tue Sep 18 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.3.4-2mdv2008.0
++ Revision: 89864
+- rebuild
+
+* Sun Sep 02 2007 Funda Wang <fwang@mandriva.org> 1.3.4-1mdv2008.0
++ Revision: 77738
+- rediff patch2
+- 64bit fix not needed
+- New version 1.3.4
+
+
+* Thu Jan 12 2006 Nicolas L�cureuil <neoclust@mandriva.org> 1.3.2-1mdk
+- New release 1.3.2
+- Rediff Patch 2
+- Remove Patch 3 (Merged upstream) 
+- Fix File List
+- Add BuildRequires
+- use mkrel
+
+* Mon Nov 14 2005 Oden Eriksson <oeriksson@mandriva.com> 1.3.0-7mdk
+- rebuilt against openssl-0.9.8a
+
+* Tue Aug 23 2005 Gwenole Beauchesne <gbeauchesne@mandriva.com> 1.3.0-6mdk
+- c++ fixes
+
+* Sat May 21 2005 Oden Eriksson <oeriksson@mandriva.com> 1.3.0-5mdk
+- fix deps
+
+* Fri Apr 15 2005 Oden Eriksson <oden.eriksson@kvikkjokk.net> 1.3.0-4mdk
+- added P4 by Robert Schiele to make it compile against latest gpgme
+- libcdk-devel requires to be build with -fPIC
+
+* Wed Mar 16 2005 Oden Eriksson <oden.eriksson@kvikkjokk.net> 1.3.0-3mdk
+- added BuildRequires: libgpgme03-devel
+- make the console stuff compile
+
+* Sun Nov 14 2004 Christiaan Welvaart <cjw@daneel.dyndns.org> 1.3.0-2mdk
+- add BuildRequires: libcdk-devel
+
+* Wed Nov 10 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 1.3.0-1mdk
+- 1.3.0
+- add locale files
+- regenerate P1 & P3
+- drop P4 (fixed upstream)
+
+* Fri Aug 27 2004 Frederic Crozat <fcrozat@mandrakesoft.com> 1.2.7-3mdk
+- Fix menu
+
+* Tue Jun 15 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 1.2.7-2mdk
+- rebuild
+
+* Wed Jun 02 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 1.2.7-1mdk
+- 1.2.7
+- fix gcc3.4 build (P4 from fedora)
+- do not bzip2 icons
+- do libtoolize
+- cleanups
+
+* Thu Apr 15 2004 Gwenole Beauchesne <gbeauchesne@mandrakesoft.com> 1.2.6-5mdk
+- rebuild
+
+* Wed Oct 01 2003 Gwenole Beauchesne <gbeauchesne@mandrakesoft.com> 1.2.6-4mdk
+- lib64 fixes
+
+* Sun Jul 20 2003 Stefan van der Eijk <stefan@eijk.nu> 1.2.6-3mdk
+- BuildRequires
+
+* Thu Jul 17 2003 David BAUDENS <baudens@mandrakesoft.com> 1.2.6-2mdk
+- Rebuild
+
+* Thu Apr 03 2003 Nicolas Planel <nplanel@mandrakesoft.com> 1.2.6-1mdk
+- Bump to version 1.2.6.
+
+* Wed Feb 19 2003 Chmouel Boudjnah <chmouel@mandrakesoft.com> 1.2.4-1mdk
+- Bump to version 1.2.4.
+
