@@ -1,7 +1,7 @@
 Summary:	ICQ clone written in C++
 Name:		licq
 Version:	1.8.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Networking/Instant messaging
 Url:		http://www.licq.org/
