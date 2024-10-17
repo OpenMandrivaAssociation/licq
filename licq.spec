@@ -4,7 +4,7 @@ Version:	1.8.2
 Release:	2
 License:	GPLv2+
 Group:		Networking/Instant messaging
-Url:		http://www.licq.org/
+Url:		https://www.licq.org/
 Source0:	http://ovh.dl.sourceforge.net/licq/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
 BuildRequires:	doxygen
